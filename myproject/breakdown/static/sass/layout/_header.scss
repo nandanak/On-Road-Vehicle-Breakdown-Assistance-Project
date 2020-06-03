@@ -1,0 +1,123 @@
+/*
+ * Header Styles
+ */
+
+.site-header{
+	background-color: $secondary-color;
+	color: white;
+
+	.header-collapse &{
+		background: transparent;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		z-index: 9;
+
+		.container:before{ display:none }
+	}
+
+	.container{
+		@include clearfix;
+		padding: 50px 0;
+		position: relative;
+
+		&:before{
+			content:" ";
+			position: absolute;
+			top:100%;
+			left:0;
+			width: 100%;
+			height: 5px;
+			background-color: $accent-color;
+		}
+	}
+}
+
+#branding{
+	float: left;
+
+	.logo, .site-title{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.logo{
+		margin-right: 15px;
+	}
+	.site-title{
+		@include em(18);
+		margin: 0;
+		color: $accent-color;
+
+			span{ color: white }
+	}
+}
+.menu-toggle{
+	background-color: transparent;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	@include em(20);
+	display: none;
+
+	@media screen and (max-width: 990px){ display: block; }
+	@media screen and (min-width: 991px){ display: none!important; }
+}
+.mobile-navigation{
+	clear: both;
+	padding: 50px 20px 0;
+	display: none;
+
+	.menu{
+		list-style: none;
+		padding-left:0;
+		margin: 0;
+		background: $secondary-color;
+
+		a{
+			color: white;
+			padding: 10px 20px;
+			display: block;
+			font-family: $primary-font;
+			border-left: 4px solid transparent;
+			transition: .3s ease;
+		}
+		.current-menu-item a,.menu-item:hover a{
+			border-left: 4px solid $accent-color;
+		}
+	}
+}
+.main-navigation{
+	float: right;
+
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media screen and (min-width: 991px){ display: block!important; }
+		@media screen and (max-width: 990px){ display: none; }
+	}
+
+	.menu-item{
+		display: inline-block;
+		padding: 0 10px;
+
+		a{
+			padding: 10px;
+			border-bottom: 3px solid transparent;
+			color: white;
+			font-family: $primary-font;
+			text-transform: uppercase;
+			@include em(14);
+			font-weight: 700;
+			transition: .3s ease;
+		}
+
+		&.current-menu-item,&:hover{
+			a{
+				border-bottom: 3px solid $accent-color;
+			}
+		}
+	}
+}

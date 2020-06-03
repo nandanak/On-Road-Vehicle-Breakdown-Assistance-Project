@@ -1,0 +1,37 @@
+.content{
+
+	.entry-title{
+		@include em(36);
+		font-weight: 400;
+		line-height: 1.5;
+		margin: 50px 0;
+	}
+	
+	p{
+		@include em(18);
+		line-height: 1.5;
+		font-weight: 100;
+		margin-bottom: 40px;
+	}
+
+	figure{
+		text-align: center;
+		margin-bottom: 40px;
+		img{ 
+			max-width: 100%;
+			height: auto;
+		}
+
+		&.block{
+			img{
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+			}
+		};
+	}
+}
+
+.text-center{ text-align: center }
+.text-left{ text-align: left }
+.text-right{ text-align: right }

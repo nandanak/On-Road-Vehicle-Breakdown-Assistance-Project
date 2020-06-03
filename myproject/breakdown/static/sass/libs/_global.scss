@@ -1,0 +1,59 @@
+/*
+ * Global Styles
+ */
+
+body {
+	font-family: $secondary-font;
+	font-size   : 16px;
+	font-weight : 300;
+	line-height : normal;
+	color: $body-color;
+
+	@media screen and (max-width:990px){ font-size: 90% }
+	@media screen and (max-width:768px){ font-size: 80% }
+}
+
+h1,h2,h3,h4,h5,h6{ 
+	font-family: $primary-font;
+	color: $strong-color;
+	margin-top: 0;
+}
+
+a { text-decoration: none }
+
+address { font-style: normal }
+
+p{ margin-top: 0 }
+
+.text-center{ text-align: center }
+
+form{
+	input:not([type="submit"]),select,textarea{
+		border: 2px solid #e1e1e1;
+		padding: 10px 10px 10px 40px;
+		background-position: -5px 12px;
+		background-repeat: no-repeat;
+		display: block;
+		font-family: $primary-font;
+		margin-bottom: 10px;
+		width: 100%;
+		outline: none;
+		transition: .3s ease;
+
+		&:hover,&:focus{
+			border-color: $accent-color;
+		}
+	}
+
+	input[type="submit"]{
+		padding: 10px 20px;
+		background: $accent-color;
+		color: white;
+		font-family: $primary-font;
+		border: none;
+		outline: none;
+		&:hover,&:active,&:focus{
+			background-color: lighten($accent-color,10%);
+		}
+	}
+}

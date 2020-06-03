@@ -1,0 +1,33 @@
+/*!
+ * Project_Name: Themezy Car Workshop
+ * Author: Themezy
+ * Email: info@themezy.com
+ * URL: http://themezy.com
+ */
+
+// Importing CSS Libraries
+
+@import		"libs/settings",
+			"libs/mixins",
+			
+			/* CSS Reset and Global Styles */
+			"libs/normalize",
+			"libs/global",
+			
+			/* Reusable components */
+			"libs/components",
+
+			/* Bootstrap grid framework */
+			"libs/bootstrap-grid/settings",
+			"libs/bootstrap-grid/mixins",
+			"libs/bootstrap-grid/grid",
+
+			/* Layout styles */
+			"layout/header",
+			"layout/sidebar",
+			"layout/content",
+			"layout/footer",
+
+			/* Specific page styling */
+			"pages/homepage";
+			

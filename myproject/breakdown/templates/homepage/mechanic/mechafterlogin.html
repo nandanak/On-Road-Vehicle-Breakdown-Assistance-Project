@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+		<title>RoaD MeCH</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Titillium+Web:300,400,700|" rel="stylesheet" type="text/css">
+
+		<link href="{% static "fonts/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static "style.css" %}">
+
+		<!--[if lt IE 9]>
+		<script src="{% static "js/ie-support/html5.js" %}"></script>
+		<script src="{% static "js/ie-support/respond.js" %}"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body class="header-collapse">
+
+		<div id="site-content">
+
+			<header class="site-header">
+				<div class="container">
+					<a id="branding" href="{% url 'index' %}">
+						<img src="{% static "images/logo.png" %}" alt="Company Logo" class="logo">
+						<h1 class="site-title">RoaD<span>MeCH</span></h1>
+					</a>
+
+					<nav class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="menu-item"><a href="{% url 'mechcontact' %}">Contact</a></li>
+							<li class="menu-item"><a href="{% url 'mechprofile' %}">Profile</a></li>
+							<li class="menu-item"><a href="{% url 'logout' %}">Logout</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-navigation"></nav>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				<div class="hero hero-slider">
+					<ul class="slides">
+						<li data-bg-image="{% static "dummy/slide-1.jpg" %}">
+							<div class="container">
+								<h2 class="slide-title">Trusted Solution for Roadside Assistance</h2>
+								<p class="slide-desc">Largest network of service provides across India, ready to help you during car breakdown.</p>
+
+							</div>
+						</li>
+						<li data-bg-image="{% static "dummy/slide-2.jpg" %}">
+							<div class="container">
+								<h2 class="slide-title">Great Services</h2>
+								<p class="slide-desc">Quick and effective solutions to tackle breakdowns.</p>
+							</div>
+						</li>
+						<li data-bg-image="{% static "dummy/slide-3.jpg" %}">
+							<div class="container">
+								<h2 class="slide-title">Quality Repairs</h2>
+								<p class="slide-desc">Designed to serve businesses on a 24*7 basis</p>
+								</div>
+						</li>
+					</ul>
+				</div> <!-- .hero-slider -->
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<h2 class="section-title">ON ROAD ASSISTANCE</h2>
+						<p class="section-desc">Facilitating on-road assistance while the vehicles are immobilized enroute, RoaD MeCH enables quick and effective solutions to tackle breakdowns.</p>
+
+						<div class="row">
+
+							<div class="counter">
+								<img src="{% static "images/icon-car.png" %}" class="counter-icon">
+								<h3 class="counter-num">1500</h3>
+								<small class="counter-label">car repaired</small>
+							</div>
+
+
+							<div class="counter">
+								<img src="{% static "images/icon-wrench.png" %}" class="counter-icon">
+								<h3 class="counter-num">5000</h3>
+								<small class="counter-label">diagnoses</small>
+							</div>
+
+
+							<div class="counter">
+								<img src="{% static "images/icon-gears.png" %}" class="counter-icon">
+								<h3 class="counter-num">6000</h3>
+								<small class="counter-label">gears changed</small>
+							</div>
+
+
+							<div class="counter last">
+								<img src="{% static "images/icon-oil.png" %}" class="counter-icon">
+								<h3 class="counter-num">1200</h3>
+								<small class="counter-label">oil litres used</small>
+							</div>
+
+
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<h2 class="section-title">Why choose us?</h2>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="feature">
+									<div class="feature-icon">
+										<img src="{% static "images/icon-wheel-white.png" %}">
+									</div>
+									<h3 class="feature-title">Ease of Access</h3>
+									<p>The RoaD MeCH services can be simply availed by dialing the contact details of opted mechanic.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature">
+									<div class="feature-icon">
+										<img src="{% static "images/icon-wrench-white.png" %}">
+									</div>
+									<h3 class="feature-title">Quick Service</h3>
+									<p>On-road assistance helps in reducing downtime of the vehicles and maintaining efficiency..</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature">
+									<div class="feature-icon">
+										<img src="{% static "images/icon-key-white.png" %}">
+									</div>
+									<h3 class="feature-title">Customer Benefits</h3>
+									<p>Service on a single call<br>Breakdown assistance on 24 X 7 X 365 basis.</p>
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block dark-bg" data-bg-color="#f63f3f">
+					<div class="container">
+						<h2 class="section-title">Services Offered</h2>
+
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+
+
+
+		<script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+		<script src="{% static "js/plugins.js" %}"></script>
+		<script src="{% static "js/app.js" %}"></script>
+
+	</body>
+
+</html>

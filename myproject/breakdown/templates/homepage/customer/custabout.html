@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+		<title>Car Workshop | About</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Titillium+Web:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="{% static "fonts/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static "style.css" %}">
+
+		<!--[if lt IE 9]>
+		<script src="{% static "js/ie-support/html5.js" %}"></script>
+		<script src="{% static "js/ie-support/respond.js" %}"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+
+		<div id="site-content">
+
+			<header class="site-header">
+				<div class="container">
+					<a id="branding" href="{% url 'index' %}">
+						<img src="{% static "images/logo.png" %}" alt="Company Logo" class="logo">
+						<h1 class="site-title">RoaD<span>MeCH</span></h1>
+					</a>
+
+					<nav class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="menu-item current-menu-item"><a href="{% url 'about' %}">About</a></li>
+							<li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
+							<li class="menu-item"><a href="{% url 'search' %}">Search</a></li>
+							<li class="menu-item"><a href="{% url 'custcontact' %}">Contact</a></li>
+							<li class="menu-item"><a href="{% url 'custprofile' %}">Profile</a></li>
+							<li class="menu-item"><a href="{% url 'logout' %}">Logout</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-navigation"></nav>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+
+				<div class="fullwidth-block content">
+					<div class="container">
+						<h2 class="entry-title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam</h2>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
+							<h3 class="team-name">Steven Simon</h3>
+							<small class="team-desc">Diagnostic Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut tenetur dicta deserunt fugiat itaque voluptates doloremque dolore accusamus suscipit quasi velit impedit quibusdam, fugit qui? Doloremque veritatis omnis inventore.</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-2.jpg" alt="person-2" %}"></figure>
+							<h3 class="team-name">George Stevens</h3>
+							<small class="team-desc">Painter</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-3.jpg" alt="person-3" %}"></figure>
+							<h3 class="team-name">Thomas Harrison</h3>
+							<small class="team-desc">Brake and Transmission Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+            </div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-4.jpg" alt="person-4" %}"></figure>
+							<h3 class="team-name">Kent Bishop</h3>
+							<small class="team-desc">Body Repair Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+            </div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" alt="person-1" %}"></figure>
+							<h3 class="team-name">Chris Roberts</h3>
+							<small class="team-desc">Vehicle Refinisher</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-2.jpg" alt="person-2" %}"></figure>
+							<h3 class="team-name">Jason James</h3>
+							<small class="team-desc">Vehicle Inspector</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-3.jpg" alt="person-3" %}"></figure>
+							<h3 class="team-name">Jackson Smith</h3>
+							<small class="team-desc">Diagnostic Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-4.jpg" alt="person-4" %}"></figure>
+							<h3 class="team-name">Lewis Williams</h3>
+							<small class="team-desc">Brake and Transmission Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam hic cum laboriosam, est saepe amet magni labore, corrupti recusandae dolores id in quidem atque, corporis animi, perferendis. Nostrum, laborum!</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
+							<h3 class="team-name">David Smith</h3>
+							<small class="team-desc">Engineer</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quisquam, odit! Mollitia, porro. Quidem officiis, harum tempora, voluptates distinctio quis illo temporibus, ea, nisi perspiciatis architecto. Voluptate voluptatibus, maiores atque.</p>
+						</div>
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-2.jpg" %}" alt="person-2"></figure>
+							<h3 class="team-name">Howarrd Newman</h3>
+							<small class="team-desc">Service Technician</small>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellat ipsum optio nam! Error at minus fugit est voluptatum, placeat, exercitationem, aspernatur dignissimos voluptate odio ea maiores eaque blanditiis! Placeat?</p>
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="subscribe-form">
+						<form action="#">
+							<input type="text" placeholder="Enter your email to subscribe...">
+							<button type="submit"><img src="{% static "images/icon-envelope-white.png" %}" alt=""></button>
+						</form>
+					</div>
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div>
+					<div class="copy">
+						<p>Copyright 2014 Company name. Designed by Amrita Students. All rights reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+
+
+
+		<script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+		<script src="{% static "js/plugins.js" %}"></script>
+		<script src="{% static "js/app.js" %}"></script>
+
+	</body>
+
+</html>
