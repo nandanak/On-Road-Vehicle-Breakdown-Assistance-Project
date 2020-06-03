@@ -21,7 +21,7 @@ Mechanic Homepage
 
 ## Running the Project Locally
 
-First, create a virtual environment(python is needed)
+First, create a virtual environment
 
 ```bash
 python -m venv venv
