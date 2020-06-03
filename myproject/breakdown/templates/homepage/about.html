@@ -55,7 +55,22 @@
 					<div class="container">
 						<h2 class="entry-title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-
+						{% for user in mechs %}
+						<div class="team image-left">
+							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
+							<h3 class="team-name">{{ user.fullname }}</h3>
+							<small class="team-desc">{{ user.special }}</small>
+							<small class="team-desc">{{ user.workshop }}</small>
+							<p>{{ user.fullname }} is working as a {{ user.special }} for last 10 years at {{ user.workshop }}. His inspection, maintenance, service and repairing vechicles over this years has made hundreds of happy customers.Now he is a part of RoaDMeCH too!</p>
+							<div class="team-social">
+								<a href=""><i class="fa fa-facebook"></i></a>
+								<a href=""><i class="fa fa-google-plus"></i></a>
+							</div>
+							<div class="col-lg-9 ml-auto text-right">
+								<input type="button" class="btn btn-primary" value="Contact" />
+							</div>
+						</div>
+						{% endfor %}
 						<div class="team image-left">
 							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
 							<h3 class="team-name">Steven Simon</h3>

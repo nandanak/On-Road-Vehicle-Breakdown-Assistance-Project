@@ -35,7 +35,8 @@ class CustomerSignUpView(CreateView):
 			return redirect('custaftersignup')
 
 def custabout(request):
-	return render(request, 'homepage/customer/custabout.html', {})
+	mechs = User.objects.filter(is_approved=1)
+	return render(request, 'homepage/customer/custabout.html', {'mechs': mechs})
 def custcontact(request):
 	return render(request, 'homepage/customer/custcontact.html', {})
 def custservices(request):
@@ -81,9 +82,8 @@ class SearchResultsView(ListView):
 
 
 def search(request):
-		mechs = User.objects.filter(is_mechanic=1)
+		mechs = User.objects.filter(is_approved=1)
 		return render(request, 'homepage/customer/search.html', {'mechs': mechs})
-
 
 
 #def mech_list(request):

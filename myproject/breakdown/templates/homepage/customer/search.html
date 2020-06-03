@@ -71,8 +71,9 @@
 						<div class="team image-left">
 							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
 							<h3 class="team-name">{{ user.fullname }}</h3>
+							<small class="team-desc">{{ user.special }}</small>
 							<small class="team-desc">{{ user.workshop }}</small>
-							<p>Steven Simon is workings as a diagnostic technician for last 10 years. His inspection, maintenance, service and repairing vechicles over this years has made hundreds of happy customers.Now he is a part of RoaDMeCH too!</p>
+							<p>{{ user.fullname }} is working as a {{ user.special }} for last 10 years at {{ user.workshop }}. His inspection, maintenance, service and repairing vechicles over this years has made hundreds of happy customers.Now he is a part of RoaDMeCH too!</p>
 							<div class="team-social">
 								<a href=""><i class="fa fa-facebook"></i></a>
 								<a href=""><i class="fa fa-google-plus"></i></a>
@@ -86,7 +87,7 @@
 							<figure class="team-image"><img src="{% static "dummy/person-1.jpg" %}" alt="person-1"></figure>
 							<h3 class="team-name">Steven Simon</h3>
 							<small class="team-desc">Diagnostic Technician</small>
-							<p>Steven Simon is workings as a diagnostic technician for last 10 years. His inspection, maintenance, service and repairing vechicles over this years has made hundreds of happy customers.Now he is a part of RoaDMeCH too!</p>
+							<p>Steven Simon is working as a diagnostic technician for last 10 years. His inspection, maintenance, service and repairing vechicles over this years has made hundreds of happy customers.Now he is a part of RoaDMeCH too!</p>
 							<div class="team-social">
 								<a href=""><i class="fa fa-facebook"></i></a>
 								<a href=""><i class="fa fa-google-plus"></i></a>

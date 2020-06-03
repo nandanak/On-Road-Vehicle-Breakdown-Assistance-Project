@@ -8,6 +8,7 @@ from django.dispatch import receiver
 class User(AbstractUser):
 	is_customer = models.BooleanField(default=False)
 	is_mechanic = models.BooleanField(default=False)
+	is_admin = models.BooleanField(default=False)
 	fullname = models.CharField(max_length=100)
 	workshop = models.CharField(max_length=100)
 	special = models.CharField(max_length=100, default="nothing")
@@ -15,6 +16,7 @@ class User(AbstractUser):
 	city = models.CharField(max_length=50)
 	contact = models.CharField(max_length=12)
 	bio = models.TextField(default="hi")
+	is_approved = models.BooleanField(default=False)
 
 #class Customer(AbstractBaseUser):
 #	fullname = models.CharField(max_length=100)
@@ -31,6 +33,7 @@ class Profile(models.Model):
 	email = models.EmailField(max_length=50)
 	workshop = models.CharField(max_length=100)
 	special = models.CharField(max_length=100, default="nothing")
+	is_approved = models.BooleanField(default=False)
 	location = models.CharField(max_length=50)
 	city = models.CharField(max_length=50)
 	contact = models.CharField(max_length=12)

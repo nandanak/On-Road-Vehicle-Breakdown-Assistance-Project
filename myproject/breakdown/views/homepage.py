@@ -17,17 +17,18 @@ def index(request):
 	if request.user.is_authenticated:
 		if request.user.is_customer:
 			return redirect('custafterlogin')
-		else:
+		elif request.user.is_mechanic:
 			return redirect('mechafterlogin')
+		else:
+			return redirect('adafterlogin')
 	return render(request, 'homepage/index.html')
 
 def about(request):
+	mechs = User.objects.filter(is_approved=1)
 	if request.user.is_authenticated:
 		if request.user.is_customer:
 			return redirect('custabout')
-		else:
-			return redirect('custcontact')
-	return render(request, 'homepage/about.html')
+	return render(request, 'homepage/about.html', {'mechs': mechs})
 
 def services(request):
 	if request.user.is_authenticated:
@@ -39,7 +40,9 @@ def signupcust(request):
 
 def signupmech(request):
 					return render(request,'homepage/signupmech.html', {})
-
+def search(request):
+		mechs = User.objects.filter(is_approved=1)
+		return render(request, 'homepage/about.html', {'mechs': mechs})
 #def user_login(request):
 				#	return render(request, 'homepage/login.html', {})
 
